@@ -7,18 +7,28 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
     position: fixed;
+    /* background-color: #f0f0f0; */
     width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
     display: flex;
     justify-content: space-between;
+    transition: top 0.5s;
 }
-
+h4{
+    font-family: 'Poppins', sans-serif;
+}
+.menu-icon{
+    
+    margin-left: 20px;
+    display: none;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -26,15 +36,108 @@ nav ul {
     margin-top: 30px;
 }
 
-nav ul li:last-child {
-    margin-right: -50px;
+.idioma{
+    
+    z-index: 100;
+    text-align: center;
+    justify-items: center;
+    font-family: 'Oswald',sans-serif;
+    color: white;
+    padding: 0px 20px;
+    margin-top:20px;
+    
+
 }
+.idioma ul li a{
+    margin: 0;
+}
+.idioma ul li ul li a{
+    margin: 0;
+}
+/* menu */
+
+.idioma ul {
+    list-style:none;
+    margin-top: 0px;
+    
+    padding:0;
+    
+   }
+   
+   /* items del menu */
+   
+   .idioma ul li {
+    
+   }
+   
+   /* enlaces del menu */
+   
+   .idioma ul a {
+    display:inline-table;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    padding:10px;
+    /* text-transform:uppercase; */
+    letter-spacing:1px;
+    
+   }
+   .idioma a{
+    border: solid 1px white;
+    width: 30px;
+   }
+   
+   /* items del menu */
+   
+   .idioma ul li {
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+   }
+   .idioma ul li:hover {
+   }
+
+.idioma ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+.idioma ul ul li {
+ float:none;
+ margin-top: 1px;
+ 
+}
+
+/* enlaces de los items del menu desplegable */
+
+.idioma ul ul a {
+ line-height:120%;
+ padding:10px 16px ;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+.idioma ul li:hover  ul {
+ display:block;
+}
+.idioma img{
+    width: 25px;
+}
+
+
 
 nav ul li a {
     text-decoration: none;
     color: #f0f0f0;
     margin-right: 50px;
     font-size: 1.2rem;
+    font-family: 'Oswald',sans-serif;
 }
 
 section#slider {
@@ -69,14 +172,13 @@ h1#slider-text {
     left: 60%;
     transform: translate(-17%, -90%);
     background: linear-gradient(0deg, rgba(166,166,166,1) 0%, rgba(255,255,255,1) 32%);
+   
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-
 }
 h1{
 	font-family: 'Love Ya Like A Sister';
-    font-size: 6vw;
+    font-size: 8vw;
 }
 
 section#content {
@@ -92,4 +194,409 @@ div.text-slider {
     width: 100%;
     height: 100%;
     opacity: .9;
+}
+
+
+#logo img{
+	/*width: 20%;*/
+	/*height: 20%;*/
+	display: flex;
+	width: 15rem;
+    margin: 4px 5px;
+}
+nav ul li a:hover {
+    text-decoration: none;
+    color: #1C1314;
+}
+/* eliminar los idiomas */
+.translate{
+    display: none;
+}
+
+@media screen and (max-width: 850px){
+	#logo {
+        margin: 0px;
+        max-width: 264px;
+        align-items: center;
+
+    }
+   
+	nav #logo{
+		        
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin: 0px;
+        /*display: table-column;*/
+        float:  none;   
+        
+        
+
+    }
+    nav hr{
+        color: white;
+        border: solid 1px;
+        width: 250px;
+    }
+    .translate{
+        display: flex;
+    }
+    nav  .translate img{
+        display: flex;
+        width: 25px;
+    }
+    
+  
+  
+   
+
+    nav{
+        position: fixed;
+        background-color: #f0f0f0;
+    }
+     nav .idioma{
+        display: none;
+    }
+    
+    
+
+
+    #menuItems{
+        margin-top: 20px;
+    }
+    
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: rgba(51, 51, 51, 0.7);
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        display: flex;
+        /* margin-right: 50px; */
+        margin-top:10px ;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    nav ul li a{
+        color: #fff;
+        align-items: center;
+        margin: 0px;
+    }
+    .menu-icon{
+        display: block;
+        width: 40px;
+        height: 30px;
+        margin: 30px 25px;
+        
+        
+    }
+    nav ul li:last-child {
+        margin-right: 0px;
+    }
+   
+   
+   
+    
+    .col-2 {
+        flex-basis: 50%;
+        min-width: 300px;
+    }
+    .col-2 img {
+        max-width: 100%;
+        padding: 50px 0;
+    }
+    .Productos .col-4{
+        margin-bottom: 30px;
+    }
+    .chat_container{
+        
+    }
+    
+}
+/* media query de 420px */
+@media screen and (max-width: 420px){
+    nav ul li{
+        margin-bottom: 10px;
+    }
+}
+/* Nosotros */
+
+.row  img{
+    width: 100%;
+    max-width: 300px;
+    align-content: center;
+}
+
+/*PRODUCTOS  */
+.offer{
+
+    background: url('images/Awanallaqta_Nosotros.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 30px;
+    justify-content: center;
+    flex-direction: column;
+    
+
+
+}
+
+
+
+
+.offer .small-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+.offer .row{
+}
+
+.offer .title{
+    color: #f0f0f0;
+}
+.cuadro_nosotros{
+    /* border: 1px solid ; */
+    display: flex;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 20px;
+    color: #f0f0f0;
+    font-family: 'Work Sans', sans-serif;
+    text-align: justify;
+    background: rgba(0, 0, 0,0.5);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    font-size: 17px;
+    flex-direction: column;
+
+
+}
+.offer button{
+    width: 300px;
+    height: 60px;
+    background-color: #ff523b;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    color: #f0f0f0;
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+.small-container{
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.title{
+    font-family: 'Oswald',sans-serif;
+    text-align: center;
+    margin: 0 auto 30px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    
+}
+.col-4{
+    flex-basis: 24%;
+    padding: 10px;
+    min-width: 264px;
+    margin-bottom: 25px;
+    transition: transform 0.5s;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);;
+}
+.col-4 img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+.rating{
+    color: #ff523b;
+}
+.col-4:hover{
+    transform: translateY(-10px);
+}
+/* Footer */
+footer{
+    background: rgba(255, 82, 59,1);
+    color: #f0f0f0;
+    font-size: 14px;
+    padding:60px 0 20px ;
+}
+footer p{
+    color: #f0f0f0;
+
+}
+footer h3{
+    color:#fff;
+    margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px;
+}
+.copyrigth{
+    text-align: center;
+}
+
+
+
+/* Redes Sociales */
+.container-redes{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-redes a{
+    margin-top: 4px;
+}
+
+.container-redes img{
+    width: 60px;
+    padding: 4px;
+    background: rgba(0,0,0,0.0);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 300ms;
+}
+
+.container-redes a:hover img{
+    background: rgba(0,0,0,0.10);
+}
+.chat_container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+}
+.chat_button{
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 0;
+    background-color: #337ab7;
+    text-align: center;
+    color: #fff;
+}
+.chat_content{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display:none ;
+}
+
+.social-icons i{
+    color: black;
+}
+.social-icons a:hover,
+.social-icons-bar a:hover{
+    background-color: #FF523b;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+.social-icons a:hover i,
+.social-icons-bar a:hover i{
+    color: #fff;
+    transition: all ease 0.5s;
+}
+.social-icons-bar{
+    position: fixed;
+    top: 50%;
+    right: 0px;
+    transform:translate(-50%) ;
+}
+.social-icons-bar a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    background-color: #fff;
+    border: 1px solid #cbcbcb;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+.social-icons-bar i{
+    color: #2b2b2b;
+    font-size: 20px;
 }
