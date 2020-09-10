@@ -336,6 +336,15 @@ nav ul li a:hover {
 }
 
 /*PRODUCTOS  */
+.video{
+    width: 560px;
+}
+.video iframe{
+
+    min-height:200px ;
+    left:0;
+    width: 100%;
+}
 .offer{
 
     background: url('images/Awanallaqta_Nosotros.jpg') no-repeat top center;
